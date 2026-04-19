@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You said Yes! 🎉</title>
+    <meta name="description" content="Yay! We're official 💕">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <div class="hearts-bg" id="hearts-bg"></div>
+
+    <div class="container yes-container">
+
+        <!-- Title -->
+        <h1 class="yes-title" id="yes-title">Knew you'd say Yes! 🎉</h1>
+
+        <!-- Countdown badge -->
+        <div class="countdown-badge">
+            <span id="countdown-text">You've made me happy for 0 seconds 💖</span>
+        </div>
+
+        <!-- Envelope reveal -->
+        <div class="envelope-section">
+            <div class="envelope-wrapper" id="envelope-wrapper" onclick="openEnvelope()" role="button" aria-label="Open love letter">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap" id="envelope-flap"></div>
+                    <div class="envelope-body">💌</div>
+                </div>
+                <p class="envelope-hint" id="envelope-hint">Click to open 💕</p>
+            </div>
+            <div class="letter-card" id="letter-card">
+                <p class="letter-greeting" id="letter-greeting">Dear you,</p>
+                <p class="letter-body" id="letter-body">
+                    Every moment with you feels like magic. Thank you for making me the happiest
+                    person in the whole world. You mean absolutely everything to me. 💕
+                </p>
+                <p class="letter-sign">With all my love 🌸</p>
+            </div>
+        </div>
+
+        <!-- GIF -->
+        <div class="gif-container">
+            <img id="cat-gif" src="https://media.tenor.com/eNHbizSfVb0AAAAj/lovemode-cute.gif" alt="celebrating">
+        </div>
+
+        <!-- Message -->
+        <p class="yes-message" id="yes-message">You just made me the happiest person! 💕</p>
+
+        <!-- Photo Memories Carousel -->
+        <div class="memories-section">
+            <h2 class="memories-title">💝 Our Memories</h2>
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track" id="carousel-track">
+
+                    <div class="memory-slide slide-1">
+                        <div class="slide-content">
+                            <span class="slide-icon">🌸</span>
+                            <!-- Tip: Replace slide-content with <img src="photo1.jpg" alt="Memory"> -->
+                            <p>Our first hello</p>
+                        </div>
+                    </div>
+
+                    <div class="memory-slide slide-2">
+                        <div class="slide-content">
+                            <span class="slide-icon">🌙</span>
+                            <!-- Tip: Replace slide-content with <img src="photo2.jpg" alt="Memory"> -->
+                            <p>Starry nights together</p>
+                        </div>
+                    </div>
+
+                    <div class="memory-slide slide-3">
+                        <div class="slide-content">
+                            <span class="slide-icon">💫</span>
+                            <!-- Tip: Replace slide-content with <img src="photo3.jpg" alt="Memory"> -->
+                            <p>Every laugh we shared</p>
+                        </div>
+                    </div>
+
+                    <div class="memory-slide slide-4">
+                        <div class="slide-content">
+                            <span class="slide-icon">💕</span>
+                            <!-- Tip: Replace slide-content with <img src="photo4.jpg" alt="Memory"> -->
+                            <p>Forever &amp; always</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Dots injected by JS -->
+                <div class="carousel-dots" id="carousel-dots"></div>
+            </div>
+        </div>
+
+        <!-- Share button -->
+        <button class="share-btn" id="share-btn" onclick="shareIt()" aria-label="Share the love">
+            Share the love 💕
+        </button>
+
+    </div>
+
+    <!-- Reasons ticker -->
+    <div class="ticker-wrapper">
+        <div class="ticker-track" id="ticker-track"></div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="music/beabadoobee - Glue Song (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="controls">
+        <button id="music-toggle" onclick="toggleMusic()" title="Toggle music" aria-label="Toggle music">🔊</button>
+        <button id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+    </div>
+
+    <script src="yes-script.js"></script>
+</body>
+</html>

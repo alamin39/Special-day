@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my Valentine? 💕</title>
+    <meta name="description" content="A special Valentine's Day question just for you 💕">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hearts-bg" id="hearts-bg"></div>
+
+    <div class="container">
+        <p class="subtitle" id="subtitle">💌 A special question, just for you...</p>
+        <h1 id="main-title">Will you be my Valentine? 💕</h1>
+
+        <div class="gif-container">
+            <div class="gif-loader" id="gif-loader">💕</div>
+            <img id="cat-gif"
+                 src="https://media.tenor.com/EBV7OT7ACfwAAAAj/u-u-qua-qua-u-quaa.gif"
+                 alt="cute character"
+                 class="loading">
+        </div>
+
+        <div class="buttons">
+            <button id="yes-btn" onclick="handleYesClick()" aria-label="Yes, I will be your Valentine">Yes 💕</button>
+            <button id="no-btn" onclick="handleNoClick()" aria-label="No">No</button>
+        </div>
+
+        <div id="tease-toast" role="status" aria-live="polite"></div>
+    </div>
+
+    <!-- Reasons ticker -->
+    <div class="ticker-wrapper">
+        <div class="ticker-track" id="ticker-track"></div>
+    </div>
+
+    <audio id="bg-music" loop autoplay muted>
+        <source src="music/beabadoobee - Glue Song (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="controls">
+        <button id="music-toggle" onclick="toggleMusic()" title="Toggle music" aria-label="Toggle music">🔊</button>
+        <button id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
